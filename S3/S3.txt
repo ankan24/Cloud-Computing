@@ -1,0 +1,32 @@
+Amazon S3 (Simple Storage Service)
+
+Introduction:
+Amazon S3 is a cloud storage service that allows users to store and retrieve data at any scale.
+
+Steps to Create an S3 Bucket:
+1. Sign in to AWS Console → Navigate to S3 Dashboard
+2. Click "Create Bucket"
+3. Enter a globally unique bucket name
+4. Choose a region and configure settings (public/private, versioning)
+5. Click "Create Bucket"
+
+Uploading Files:
+1. Open the bucket
+2. Click "Upload"
+3. Select files, configure permissions, and click "Upload"
+
+Accessing Files:
+- Public files: Access via Object URL
+- Private files: Use IAM permissions or presigned URLs
+
+Managing Storage:
+- Enable lifecycle policies to auto-delete old files
+- Use Glacier storage for cost savings
+- Set up cross-region replication for backup
+
+Benefits of S3:
+- Scalability: Store unlimited data
+- Durability: 99.999999999% (11 9’s) durability
+- Security: Encryption and IAM policies
+- Cost-Effective: Pay for what you use
+- Integration: Works with EC2, Lambda, CloudFront, and more

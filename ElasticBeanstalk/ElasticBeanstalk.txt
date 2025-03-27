@@ -1,0 +1,50 @@
+ 
+AWS Elastic Beanstalk
+
+Introduction:
+AWS Elastic Beanstalk is a Platform-as-a-Service (PaaS) for deploying and scaling web applications without managing infrastructure. It supports Node.js, Python, Java, PHP, Ruby, Go, and .NET.
+
+Steps to Create and Use AWS Elastic Beanstalk:
+
+1. Create an Elastic Beanstalk Application:
+   - Sign in to AWS Console and go to Elastic Beanstalk.
+   - Click "Create Application".
+   - Enter Application Name.
+   - Select a platform (Node.js, Python, Java, etc.).
+   - Choose "Sample Application" or upload your own code.
+   - Click "Create Application".
+
+2. Deploy an Application:
+   - Using AWS CLI:
+     eb init  # Initialize project
+     eb create my-env  # Create an environment
+     eb deploy  # Deploy application
+   - Or use the AWS Console:
+     - Open the application.
+     - Click "Upload and Deploy".
+     - Choose your application ZIP file and deploy.
+
+3. Monitor and Scale:
+   - Go to "Configuration" > "Capacity".
+   - Set the desired number of instances.
+   - Enable "Auto Scaling" for automatic scaling.
+   - Check the health dashboard for logs and metrics.
+
+4. Update an Application:
+   - Modify the application code.
+   - Run:
+     eb deploy  # Deploy latest changes
+
+5. Terminate an Environment:
+   - Run:
+     eb terminate my-env
+   - Or delete from AWS Console.
+
+Benefits of AWS Elastic Beanstalk:
+- Easy Deployment: No server configuration required.
+- Auto Scaling: Scales based on traffic needs.
+- Monitoring: Built-in logs and health checks.
+- Multi-Language Support: Supports Python, Node.js, Java, PHP, etc.
+- Security & Cost Management: Uses IAM roles and Auto Scaling.
+
+For more details, visit the AWS Elastic Beanstalk Documentation.

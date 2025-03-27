@@ -1,0 +1,50 @@
+ 
+AWS CloudShell
+
+Introduction:
+AWS CloudShell is a browser-based shell that lets you securely manage AWS resources without installing the AWS CLI on your local machine.
+
+Steps to Use AWS CloudShell:
+
+1. Open AWS CloudShell:
+   - Log in to AWS Console.
+   - Click on the CloudShell icon in the top-right corner.
+   - A terminal window opens in your browser.
+
+2. Run AWS CLI Commands:
+   - AWS CLI is pre-installed.
+   - Example commands:
+     aws s3 ls  # List all S3 buckets
+     aws ec2 describe-instances  # View EC2 instances
+
+3. Upload and Download Files:
+   - **Upload**: Click "Actions" → "Upload file" → Select a file.
+   - **Download**: Use command:
+     zip myfile.zip myfile.txt
+     download myfile.zip
+
+4. Install Additional Tools:
+   - Use package managers to install tools:
+     sudo yum install jq  # Amazon Linux
+     sudo apt install tree  # Ubuntu
+
+5. Persistent Storage:
+   - CloudShell provides 1GB of storage in the ~/ directory.
+   - Files stored in ~/ persist across sessions.
+
+6. Use CloudShell for AWS Automation:
+   - Create and run scripts:
+     echo "Hello AWS CloudShell" > hello.txt
+     cat hello.txt
+   - Run shell scripts:
+     chmod +x myscript.sh
+     ./myscript.sh
+
+Benefits of AWS CloudShell:
+- No installation needed.
+- Secure and pre-authenticated AWS access.
+- Accessible from any browser.
+- Built-in persistent storage.
+- Free to use (included in AWS Free Tier).
+
+For more details, visit the AWS CloudShell Documentation.

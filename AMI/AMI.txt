@@ -1,0 +1,36 @@
+ 
+AWS AMI (Amazon Machine Image)
+
+Introduction:
+Amazon Machine Image (AMI) is a virtual machine template that includes an OS, application software, and configurations for launching EC2 instances.
+
+Steps to Create and Use AWS AMI:
+
+1. Create an AMI from an EC2 Instance:
+   - Open AWS Console → EC2 Dashboard → Instances.
+   - Select an instance → Click "Actions" → "Create Image".
+   - Provide a name and description → Click "Create Image".
+   - Wait for AMI creation under the "AMIs" section.
+
+2. Launch an EC2 Instance from an AMI:
+   - Open AWS Console → EC2 Dashboard → AMIs.
+   - Select an AMI → Click "Launch".
+   - Choose an instance type → Configure settings.
+   - Click "Launch" to create an EC2 instance from the AMI.
+
+3. Use AWS CLI for AMI Management:
+   - Create an AMI:
+     aws ec2 create-image --instance-id i-1234567890abcdef0 --name "MyCustomAMI" --no-reboot
+   - List available AMIs:
+     aws ec2 describe-images --owners self
+   - Deregister an AMI:
+     aws ec2 deregister-image --image-id ami-0abcdef1234567890
+
+Benefits of AWS AMI:
+- Faster Deployment: Quickly launch pre-configured EC2 instances.
+- Customizability: Create custom AMIs with specific applications.
+- Scalability: Easily launch multiple identical instances.
+- Cost Savings: Saves time in configuring new instances.
+- Backup & Recovery: Use AMIs as backups for EC2 instances.
+
+For more details, visit the AWS AMI Documentation.

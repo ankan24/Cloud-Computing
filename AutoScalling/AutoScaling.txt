@@ -1,0 +1,39 @@
+AWS Auto Scaling
+
+Introduction:
+AWS Auto Scaling automatically adjusts EC2 instances based on demand for high availability and cost efficiency.
+
+Steps to Set Up Auto Scaling:
+
+1. Create a Launch Template:
+   - Go to EC2 Dashboard → Launch Templates
+   - Click "Create Launch Template"
+   - Choose an AMI, Instance Type, Security Groups, and Key Pair
+   - Click "Create Template"
+
+2. Create an Auto Scaling Group:
+   - Go to EC2 Dashboard → Auto Scaling Groups
+   - Click "Create Auto Scaling Group"
+   - Select the Launch Template
+   - Define VPC and Subnets
+   - Configure Load Balancing (optional)
+   - Set Desired, Min, and Max Instance Count
+   - Configure Scaling Policies:
+     - Target Tracking: Adjusts based on CPU/memory utilization
+     - Step Scaling: Adjusts based on predefined thresholds
+     - Scheduled Scaling: Adjusts based on time schedule
+   - Click "Create Auto Scaling Group"
+
+3. Test Auto Scaling:
+   - Increase workload and monitor instance count changes
+
+4. Modify or Delete Auto Scaling Group:
+   - Modify: Go to Auto Scaling Groups → Select group → Modify
+   - Delete: Select the group → Click "Delete"
+
+Benefits of Auto Scaling:
+- High Availability: Ensures application uptime
+- Cost Efficiency: Scales down during low demand
+- Performance Optimization: Maintains optimal system performance
+- Automated Management: Adjusts instances automatically
+- Integration: Works with ELB, CloudWatch, and Route 53

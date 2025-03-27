@@ -1,0 +1,35 @@
+Amazon VPC (Virtual Private Cloud)
+
+Introduction:
+Amazon VPC allows users to create a secure and isolated cloud network for AWS resources.
+
+Steps to Create a VPC:
+1. Sign in to AWS Console → Navigate to VPC Dashboard
+2. Click "Create VPC" → Enter name and CIDR block (e.g., 10.0.0.0/16)
+3. Enable IPv6 (optional) → Choose tenancy → Click "Create VPC"
+
+Creating Subnets:
+1. Go to "Subnets" → Click "Create Subnet"
+2. Select the VPC, choose an Availability Zone, and enter a CIDR block (e.g., 10.0.1.0/24)
+3. Click "Create Subnet"
+
+Creating an Internet Gateway:
+1. Go to "Internet Gateways" → Click "Create IGW"
+2. Attach the IGW to the VPC
+
+Configuring Route Tables:
+1. Go to "Route Tables" → Click "Create Route Table"
+2. Associate it with the VPC
+3. Add a route for 0.0.0.0/0 pointing to the IGW
+
+Modifying Security Groups & NACLs:
+1. Go to "Security Groups" → Modify inbound/outbound rules
+2. Allow necessary traffic (e.g., SSH, HTTP, HTTPS)
+3. Configure Network ACLs for additional security
+
+Benefits of VPC:
+- Isolation: Private and secure network
+- Custom Networking: Define IP ranges, subnets, and routing
+- Scalability: Easily expand with new subnets
+- Security: Use security groups, NACLs, and VPNs
+- Integration: Works with EC2, RDS, Lambda, and other AWS services

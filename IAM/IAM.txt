@@ -1,0 +1,47 @@
+AWS IAM (Identity and Access Management)
+
+Introduction:
+AWS IAM helps manage access to AWS services securely. It allows creating users, groups, and roles with permissions.
+
+Steps to Create and Use IAM:
+
+1. Create an IAM User:
+   - Sign in to AWS Console and go to IAM.
+   - Click "Users" → "Add user".
+   - Enter a username and select "Access key - Programmatic access".
+   - Assign permissions (AdministratorAccess, AmazonS3FullAccess).
+   - Click "Create user" and download the access key.
+
+2. Create an IAM Group:
+   - Click "Groups" → "Create group".
+   - Assign permissions (AmazonEC2FullAccess, AmazonRDSFullAccess).
+   - Add users to the group.
+
+3. Create an IAM Role:
+   - Click "Roles" → "Create role".
+   - Select a trusted entity (e.g., AWS service like EC2).
+   - Attach a policy (AmazonS3ReadOnlyAccess).
+   - Create the role and assign it to a service.
+
+4. Attach an IAM Policy:
+   - Click "Policies" → "Create Policy".
+   - Example JSON Policy for S3 Access:
+     {
+       "Version": "2012-10-17",
+       "Statement": [
+         {
+           "Effect": "Allow",
+           "Action": "s3:*",
+           "Resource": "*"
+         }
+       ]
+     }
+   - Attach policy to users, groups, or roles.
+
+Benefits of AWS IAM:
+- Granular Access Control: Set fine-grained permissions.
+- Secure Authentication: Uses MFA and temporary credentials.
+- Role-Based Access: Assign roles to AWS services.
+- Auditing & Monitoring: Tracks access with AWS CloudTrail.
+
+For more details, visit the AWS IAM Documentation.

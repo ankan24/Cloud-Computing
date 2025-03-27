@@ -1,0 +1,30 @@
+Amazon EC2 (Elastic Compute Cloud)
+
+Introduction:
+Amazon EC2 provides scalable cloud computing power, allowing users to run virtual machines (instances) on demand.
+
+Steps to Create an EC2 Instance:
+1. Sign in to AWS Console: 
+   - Go to AWS Console → Navigate to EC2 Dashboard
+
+2. Launch an EC2 Instance:
+   - Click "Launch Instance"
+   - Choose an AMI (Amazon Linux, Ubuntu, Windows, etc.)
+   - Select an instance type (t2.micro for free tier)
+   - Configure instance details, add storage, and set up security groups
+   - Review and launch
+
+3. Access EC2 Instance:
+   - Linux: Use SSH → `ssh -i your-key.pem ec2-user@your-ec2-ip`
+   - Windows: Use RDP, download key, and retrieve the password
+
+4. Manage EC2 Instance:
+   - Start: Select instance → Click "Start"
+   - Stop: Select instance → Click "Stop"
+   - Terminate: Select instance → Click "Terminate" (deletes instance)
+
+Benefits of EC2:
+- Scalability: Easily scale resources
+- Flexibility: Various OS and instance types
+- Security: IAM and security groups for protection
+- Cost-Effective: Pay for what you use
