@@ -17,6 +17,7 @@ This repository covers a wide range of AWS services, providing scripts, configur
 - **EC2** (Elastic Compute Cloud)
 - **Elastic Beanstalk**
 - **IAM** (Identity and Access Management)
+- **Kubernetes**
 - **Load Balancing**
 - **RDS** (Relational Database Service)
 - **S3** (Simple Storage Service)
