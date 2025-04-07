@@ -1,0 +1,99 @@
+KUBERNETES
+==========
+
+DESCRIPTION:
+-----------
+Kubernetes is an open-source container orchestration platform for automating deployment, scaling, and management of containerized applications. Initially designed by Google and now maintained by the Cloud Native Computing Foundation (CNCF), Kubernetes provides a portable, extensible platform for managing containerized workloads and services, facilitating both declarative configuration and automation.
+
+CREATION STEPS:
+--------------
+1. Install a container runtime (Docker, containerd, CRI-O)
+2. Install kubeadm, kubelet, and kubectl tools
+3. Initialize the control plane with kubeadm
+4. Set up a pod network add-on
+5. Join worker nodes to the cluster
+6. Verify cluster status
+7. Deploy sample applications
+
+BENEFITS:
+--------
+- Container orchestration automation
+- High availability and fault tolerance
+- Horizontal scaling of applications
+- Service discovery and load balancing
+- Automated rollouts and rollbacks
+- Self-healing capabilities
+- Storage orchestration
+- Secret and configuration management
+- Batch execution processing
+- Extensible architecture with plugins
+- Large ecosystem and community support
+- Cloud provider agnostic
+
+USE CASES:
+---------
+- Microservices architecture
+- Containerized application deployment
+- Cloud-native applications
+- DevOps and CI/CD pipelines
+- Highly available applications
+- Stateful applications and databases
+- Batch processing and scheduled jobs
+- Machine learning workloads
+- Edge computing and IoT deployments
+- Multi-cloud and hybrid deployments
+
+COMPONENTS:
+----------
+CONTROL PLANE:
+- API Server: Front-end for Kubernetes control plane
+- etcd: Distributed key-value store for cluster data
+- Scheduler: Assigns pods to nodes
+- Controller Manager: Runs controller processes
+- Cloud Controller Manager: Interfaces with cloud providers
+
+NODE COMPONENTS:
+- Kubelet: Agent ensuring containers are running in pods
+- Kube-proxy: Maintains network rules on nodes
+- Container Runtime: Responsible for running containers
+
+OBJECTS:
+- Pods: Smallest deployable units
+- Services: Network abstraction for pod access
+- Volumes: Storage abstraction
+- Namespaces: Virtual clusters
+- ReplicaSets: Pod replication controllers
+- Deployments: Declarative updates for pods
+- StatefulSets: For stateful applications
+- DaemonSets: Ensures pods run on all nodes
+- Jobs and CronJobs: For batch processing
+- ConfigMaps and Secrets: Configuration management
+
+NETWORKING:
+- Pod networking model
+- Service networking
+- Ingress controllers
+- Network policies
+- DNS service discovery
+
+LIMITATIONS:
+-----------
+- Complexity for simple applications
+- Steep learning curve
+- Resource overhead for small deployments
+- Stateful application challenges
+- Legacy application compatibility issues
+- Need for proper monitoring and observability tools
+- Difficult troubleshooting for beginners
+- Security requires careful configuration
+
+ALTERNATIVES:
+-----------
+- Docker Swarm: Simpler alternative
+- Apache Mesos: For large-scale clusters
+- Nomad by HashiCorp: Lightweight orchestrator
+- OpenShift: Enterprise Kubernetes distribution
+- Amazon ECS: AWS-specific container orchestration
+- Azure Container Instances: Serverless containers
+- Google Cloud Run: Serverless containers
+- Rancher: Kubernetes management platform
