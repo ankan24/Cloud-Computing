@@ -1,0 +1,27 @@
+AWS CloudFormation
+
+AWS CloudFormation is an Infrastructure as Code (IaC) service that enables you to model, provision, and manage AWS resources using templates.
+
+Creating CloudFormation Templates:
+- Templates are written in YAML or JSON format
+- Define resources using AWS resource types
+- Specify properties for each resource
+- Templates can include parameters, mappings, conditions, and outputs
+
+Using CloudFormation:
+- Templates can be deployed via console, CLI, or API
+- Resources are created in the correct order based on dependencies
+- Changes can be previewed before applying
+- Resources can be updated, replaced, or deleted as needed
+
+Benefits:
+- Single source of truth for infrastructure
+- Version control for infrastructure
+- Consistent and repeatable deployments
+- Automatic dependency resolution
+- Built-in validation and rollback capabilities
+- Infrastructure documentation
+- Change tracking and management
+- Cost estimation before deployment
+- Cross-region and cross-account deployment support
+- Integration with AWS service catalog

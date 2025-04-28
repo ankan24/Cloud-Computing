@@ -1,0 +1,34 @@
+AMAZON LEX - KEY INFORMATION
+
+DEFINITION:
+Amazon Lex is a fully managed artificial intelligence (AI) service that enables developers to build conversational interfaces for applications using voice and text.
+
+MAIN FEATURES:
+- Automatic Speech Recognition (ASR) - converts speech to text
+- Natural Language Understanding (NLU) - determines intent
+- Dialog management - maintains conversation context
+- Bot building and management interface
+- Multiple language support
+- Integration with AWS Lambda for business logic
+- Analytics and monitoring capabilities
+
+USE CASES:
+1. Customer service chatbots
+2. Information retrieval bots
+3. Transaction processing bots
+4. Enterprise productivity assistants
+5. IoT device control through voice
+6. Automated phone systems
+7. Virtual assistants in applications
+
+LIMITATIONS:
+- Audio input limited to 15 seconds
+- Maximum 5 slots per intent
+- Maximum 200 sample utterances per intent
+- Limited support for certain languages and accents
+- Session attributes limited to 12KB
+
+PRICING:
+- Pay-per-request model
+- Separate charges for speech and text requests
+- Free tier available for new AWS customers

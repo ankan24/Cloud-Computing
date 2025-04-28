@@ -1,0 +1,39 @@
+AWS Kinesis
+
+AWS Kinesis is a platform for streaming data on AWS that makes it easy to collect, process, and analyze real-time, streaming data.
+
+Kinesis Services:
+- Kinesis Data Streams: for collecting and processing large streams of data records in real-time
+- Kinesis Data Firehose: for loading streaming data into AWS data stores
+- Kinesis Data Analytics: for processing and analyzing streaming data with SQL or Apache Flink
+- Kinesis Video Streams: for streaming video from connected devices
+
+Creating and Using Kinesis Data Streams:
+- Create a stream with specified name and shard count
+- Producers send data to the stream using API calls or libraries
+- Consumers read data from the stream using the Kinesis Client Library or Lambda
+- Data retention can be configured between 24 hours and 365 days
+- Shards determine throughput capacity of the stream
+
+Creating and Using Kinesis Data Firehose:
+- Create a delivery stream with a specified destination
+- Configure buffer size, buffer interval, and data transformation
+- Send data directly to Firehose or via Kinesis Data Streams
+- Data automatically delivered to destinations like S3, Redshift, or Elasticsearch
+
+Creating and Using Kinesis Data Analytics:
+- Create an application with input from Kinesis streams or Firehose
+- Write SQL queries to analyze streaming data in real-time
+- Configure output to Kinesis streams, Firehose, or Lambda
+
+Benefits:
+- Real-time processing
+- Fully managed service
+- Scalable to handle terabytes of data per hour
+- Durable with data replicated across multiple availability zones
+- Integration with other AWS services
+- Cost-effective with pay-as-you-go pricing
+- Support for multiple data input sources
+- End-to-end encryption
+- Automatic scaling capabilities
+- Built-in error handling and retry mechanisms

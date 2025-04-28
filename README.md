@@ -12,12 +12,16 @@ This repository covers a wide range of AWS services, providing scripts, configur
 - **AutoScaling**
 - **CloudShell**
 - **CloudWatch**
+- **CloudFormation**
 - **Docker**
 - **DynamoDB**
 - **EC2** (Elastic Compute Cloud)
 - **Elastic Beanstalk**
 - **IAM** (Identity and Access Management)
+- **Kinesis**
 - **Kubernetes**
+- **Lambda**
+- **LEX**
 - **Load Balancing**
 - **RDS** (Relational Database Service)
 - **S3** (Simple Storage Service)

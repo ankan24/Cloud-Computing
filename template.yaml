@@ -1,0 +1,32 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: CloudFormation template to launch an EC2 instance with an Elastic IP
+
+Parameters:
+  KeyPair:
+    Description: Name of an existing EC2 KeyPair to SSH into the instance
+    Type: AWS::EC2::KeyPair::KeyName
+
+Resources:
+  MyEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-0c02fb55956c7d316
+      KeyName: !Ref KeyPair
+      Tags:
+        - Key: Name
+          Value: MyCloudFormationEC2
+
+  MyEIP:
+    Type: AWS::EC2::EIP
+
+  MyEIPAssoc:
+    Type: AWS::EC2::EIPAssociation
+    Properties:
+      InstanceId: !Ref MyEC2Instance
+      EIP: !Ref MyEIP
+
+Outputs:
+  Ec2Output:
+    Description: The Instance ID of the EC2 instance
+    Value: !Ref MyEC2Instance

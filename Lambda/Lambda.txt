@@ -1,0 +1,46 @@
+AWS Lambda
+
+AWS Lambda is a serverless computing service that runs your code in response to events and automatically manages the computing resources, eliminating the need to provision or manage servers.
+
+Creating Lambda Functions:
+- Choose a runtime (Node.js, Python, Java, Go, Ruby, .NET, etc.)
+- Write function code or upload a deployment package
+- Configure the function handler, memory, timeout, and environment variables
+- Set up permissions through IAM roles
+- Configure triggers and destinations
+- Optionally, connect to a VPC, set up layers, and configure concurrency
+
+Using Lambda Functions:
+- Functions can be invoked synchronously or asynchronously
+- Functions can be triggered by over 200 AWS services and SaaS applications
+- Common triggers include API Gateway, S3, DynamoDB, SQS, EventBridge, and CloudWatch Events
+- Functions can be tested directly in the console
+- Functions can be versioned and deployed through aliases
+- Multiple functions can be orchestrated with AWS Step Functions
+- Functions can be monitored with CloudWatch and X-Ray
+
+Benefits:
+- Zero server management
+- Continuous scaling based on workload
+- Subsecond metering (pay only for compute time used)
+- Consistent performance at any scale
+- High availability and fault tolerance built-in
+- Event-driven architecture support
+- Integration with AWS services and third-party applications
+- Support for multiple programming languages
+- Built-in logging and monitoring
+- Secure by default with IAM integration
+- Cost-effective for variable workloads
+- Rapid deployment and updates
+
+Best Practices:
+- Keep functions focused on a single task
+- Keep deployment packages small
+- Use environment variables for configuration
+- Minimize initialization code outside the handler
+- Implement proper error handling
+- Avoid recursive invocation patterns
+- Reuse execution context when possible
+- Set appropriate memory allocation
+- Monitor and optimize function performance
+- Use provisioned concurrency for latency-sensitive applications
