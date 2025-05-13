@@ -1,0 +1,38 @@
+AWS CloudFront
+
+Amazon CloudFront is a global content delivery network (CDN) service that accelerates delivery of websites, APIs, video content, and other web assets to users worldwide.
+
+Creating CloudFront Distributions:
+- Select an origin source (S3 bucket, EC2 instance, ALB, custom server)
+- Configure cache behaviors for different content types
+- Set up security features (HTTPS, OAI, signed URLs)
+- Define TTL settings for content caching
+- Configure custom error responses
+- Set up logging and monitoring options
+- Choose price class based on global coverage needs
+- Configure optional features like compression and field-level encryption
+
+Using CloudFront:
+- Access content through CloudFront domain name or custom domain
+- Invalidate cached content when updates are made
+- Monitor performance metrics via CloudWatch
+- Analyze access logs for usage patterns
+- Set up origin failover for high availability
+- Implement geo-restriction for content access control
+- Use Lambda@Edge for content customization at edge locations
+- Create signed URLs or cookies for restricted content
+
+Benefits:
+- Low latency content delivery through 410+ global edge locations
+- Improved website/application performance and user experience
+- Reduced load on origin servers
+- Cost savings on data transfer
+- Built-in protection against common web attacks
+- Scalability to handle traffic spikes without provisioning
+- Integration with AWS services (S3, EC2, Lambda, WAF, Shield)
+- HTTPS support with free SSL/TLS certificates via ACM
+- Real-time metrics and logging
+- Customizable content delivery based on device, location, and other factors
+- High availability with anycast routing and origin failover
+- Programmable CDN capabilities with Lambda@Edge
+- Cost-effective with pay-as-you-go pricing model

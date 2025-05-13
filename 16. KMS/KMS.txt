@@ -1,0 +1,107 @@
+AWS KEY MANAGEMENT SERVICE (KMS)
+==============================
+
+OVERVIEW
+--------
+AWS Key Management Service (KMS) is a managed service that enables you to easily create
+and control encryption keys used to encrypt your data. KMS integrates with most AWS
+services that encrypt your data and provides a centralized control point for managing
+your keys.
+
+FEATURES
+--------
+* Centralized key management across AWS services
+* Customer managed keys (CMKs) for customized control
+* Automatic key rotation capabilities
+* Access control via key policies and IAM
+* Comprehensive audit logging via CloudTrail
+* Hardware Security Module (HSM) backed for enhanced security
+* Regional service - keys are region-specific
+
+CREATING KMS KEYS
+----------------
+1. Via AWS Console:
+   - Navigate to the KMS service
+   - Select "Customer managed keys"
+   - Click "Create key"
+   - Follow the wizard to configure key properties, administrative permissions,
+     and usage permissions
+
+2. Via AWS CLI:
+   - Create a symmetric encryption key:
+     aws kms create-key --description "Description of your key"
+   
+   - Create an asymmetric key for encryption/decryption:
+     aws kms create-key --description "Asymmetric key" --key-spec RSA_2048 --key-usage ENCRYPT_DECRYPT
+
+   - Create an asymmetric key for signing:
+     aws kms create-key --description "Signing key" --key-spec RSA_2048 --key-usage SIGN_VERIFY
+
+USING KMS KEYS
+-------------
+1. Encrypt data:
+   aws kms encrypt --key-id [KEY_ID] --plaintext [DATA] --output text --query CiphertextBlob
+
+2. Decrypt data:
+   aws kms decrypt --ciphertext-blob fileb://encrypted_data --output text --query Plaintext
+
+3. Generate data key:
+   aws kms generate-data-key --key-id [KEY_ID] --key-spec AES_256
+
+4. Re-encrypt data:
+   aws kms re-encrypt --destination-key-id [NEW_KEY_ID] --ciphertext-blob fileb://encrypted_data
+
+COMMON USE CASES
+---------------
+* Encrypting data stored in AWS services (S3, RDS, EBS, etc.)
+* Envelope encryption for large datasets
+* Secure storage of application secrets
+* Data encryption/decryption in custom applications
+* Digital signatures and verification
+* Compliance with regulatory requirements
+
+BENEFITS
+-------
+1. Enhanced Security:
+   - Keys stored in FIPS 140-2 validated HSMs
+   - Keys never leave KMS unencrypted
+   - Centralized key management reduces risk
+
+2. Simplified Management:
+   - Easy integration with AWS services
+   - Automated key rotation
+   - Detailed access control
+
+3. Compliance:
+   - Helps meet compliance requirements (PCI DSS, HIPAA, etc.)
+   - Comprehensive audit logs for key management activities
+
+4. Cost-Efficiency:
+   - Pay-as-you-go pricing model
+   - No upfront investment in HSM infrastructure
+   - Reduced operational overhead
+
+LIMITATIONS
+----------
+* Keys are region-specific
+* Key material can't be exported once created (unless imported initially)
+* Default service quotas (can be increased):
+  - Maximum of 100 customer managed keys per region
+  - Maximum of 5,500 requests per second for cryptographic operations
+  - Key policy document size limited to 32 KB
+
+PRICING
+-------
+* $1.00 per customer managed key per month
+* $0.03 per 10,000 API requests
+* Free tier includes 20,000 requests per month
+
+SECURITY BEST PRACTICES
+----------------------
+* Implement least privilege access to keys
+* Enable automatic key rotation
+* Monitor key usage with CloudTrail
+* Use separate keys for different applications/data
+* Configure appropriate key policies and IAM policies
+* Use grants for temporary access
+* Consider using multi-region keys for disaster recovery
