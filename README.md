@@ -62,6 +62,8 @@ This repository does not specify a license. Please adhere to the default GitHub 
 
 For any inquiries, please reach out to the repository owner: [ankan24](https://github.com/ankan24).
 
+[View the Cloud Computing Essentials AWS Lab Table of Contents](./CloudComputingEssentials_AWSLAB.pdf)
+
 ---
 
 Happy Cloud Computing!
